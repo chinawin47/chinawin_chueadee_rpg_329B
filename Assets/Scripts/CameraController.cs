@@ -69,7 +69,7 @@ public class CameraController : MonoBehaviour
         if (Input.mousePosition.x >= Screen.width)
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime, Space.World);
         
-        if (Input.mousePosition.x <= 0)
+        if (Input.mousePosition.x <= 0f)
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime, Space.World);
 
 
@@ -77,7 +77,7 @@ public class CameraController : MonoBehaviour
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime, Space.World);
 
         
-        if (Input.mousePosition.y <= 0)
+        if (Input.mousePosition.y <= 0f)
             transform.Translate(Vector3.back * moveSpeed * Time.deltaTime, Space.World);
     }
 
