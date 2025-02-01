@@ -1190,6 +1190,8 @@ GameObject:
   - component: {fileID: 9547916}
   - component: {fileID: 4793062654429517266}
   - component: {fileID: -3829989995785857222}
+  - component: {fileID: 6635048706580342511}
+  - component: {fileID: 645051406964521074}
   m_Layer: 0
   m_Name: Character_Hero_Knight_Female 1
   m_TagString: Untagged
@@ -1296,6 +1298,31 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6635048706580342511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9366afcfd3e7b84e8bb62622e9b68c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+--- !u!114 &645051406964521074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d69393e0cf8a54cacbed10c52db6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &133228
 GameObject:
   m_ObjectHideFlags: 0

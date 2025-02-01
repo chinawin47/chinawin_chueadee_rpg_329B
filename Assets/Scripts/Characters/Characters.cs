@@ -3,7 +3,7 @@ using UnityEngine.AI;
 public enum CharState
 {
     Idle,
-    walk,
+    Walk,
     Attack,
     Hit,
     Die
