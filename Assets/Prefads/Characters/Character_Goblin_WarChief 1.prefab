@@ -3545,7 +3545,7 @@ GameObject:
   - component: {fileID: -6536751872910935418}
   - component: {fileID: -5574764192074493671}
   - component: {fileID: -4671928054087736371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Character_Goblin_WarChief 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
