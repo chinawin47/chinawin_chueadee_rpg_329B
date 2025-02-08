@@ -20,6 +20,12 @@ public abstract class Characters : MonoBehaviour
     protected CharState state;
     public CharState State { get { return state; } }
 
+    [SerializeField]
+    protected GameObject ringSelection;
+    public GameObject RingSelection { get { return ringSelection; } }
+    
+    
+
     void Awake()
     {
        navAgent = GetComponent<NavMeshAgent>();
@@ -54,6 +60,11 @@ public abstract class Characters : MonoBehaviour
 
         if(distance <= navAgent.stoppingDistance)
             SetState(CharState.Idle);
+    }
+
+    public void ToggleRingSelection(bool flag)
+    {
+        ringSelection.SetActive(flag);
     }
 
 }
