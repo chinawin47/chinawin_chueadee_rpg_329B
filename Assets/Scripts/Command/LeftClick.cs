@@ -5,8 +5,8 @@ public class LeftClick : MonoBehaviour
     private Camera cam;
    
     [SerializeField]
-    private Characters curChar;
-    public Characters CurChar { get { return curChar; } }
+    private Character curChar;
+    public Character CurChar { get { return curChar; } }
 
     [SerializeField]
     private LayerMask layerMask;
@@ -36,7 +36,7 @@ public class LeftClick : MonoBehaviour
 
     private void SelectCharacter(RaycastHit hit)
     {
-        curChar = hit.collider.GetComponent<Characters>();
+        curChar = hit.collider.GetComponent<Character>();
         Debug.Log("selected Char: " + hit.collider.gameObject);
 
         if (curChar != null)

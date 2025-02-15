@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class CharAnimation : MonoBehaviour
 {
-    private Characters character;
+    private Character character;
 
     void Start()
     {
-        character = GetComponent<Characters>();
+        character = GetComponent<Character>();
     }
 
  
@@ -15,7 +15,7 @@ public class CharAnimation : MonoBehaviour
         ChooseAnimation(character);
     }
 
-    private void ChooseAnimation(Characters c)
+    private void ChooseAnimation(Character c)
     {
         c.Anim.SetBool("IsIdle", false);
         c.Anim.SetBool("IsWalk", false);

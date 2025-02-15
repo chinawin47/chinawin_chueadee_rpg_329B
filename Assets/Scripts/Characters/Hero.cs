@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Hero : Characters
+public class Hero : Character
 {
     void Update()
     {

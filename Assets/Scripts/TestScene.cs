@@ -2,46 +2,46 @@ using UnityEngine;
 
 public class TestScene : MonoBehaviour
 {
-    [SerializeField] private Characters[] characters;
+    [SerializeField] private Character[] character;
     public void SetIdle()
     {
-        for(int i = 0; i < characters.Length; i++) 
+        for(int i = 0; i < character.Length; i++) 
         {
-            characters[i].SetState(CharState.Idle);
+            character[i].SetState(CharState.Idle);
         }
     }
 
     public void SetWalk()
     {
-        for (int i = 0; i < characters.Length; i++)
+        for (int i = 0; i < character.Length; i++)
         {
-            characters[i].SetState(CharState.Walk);
+            character[i].SetState(CharState.Walk);
         }
     }
 
     public void SetAttack()
     {
-        for (int i = 0; i < characters.Length; i++)
+        for (int i = 0; i < character.Length; i++)
         {
-            characters[i].SetState(CharState.Attack);
-            characters[i].Anim.SetTrigger("Attack");
+            character[i].SetState(CharState.Attack);
+            character[i].Anim.SetTrigger("Attack");
         }
     }
     
     public void SetDie()
     {
-        for (int i = 0; i < characters.Length; i++)
+        for (int i = 0; i < character.Length; i++)
         {
-            characters[i].SetState(CharState.Die);
-            characters[i].Anim.SetTrigger("Die");
+            character[i].SetState(CharState.Die);
+            character[i].Anim.SetTrigger("Die");
         }
     }
     public void SetHit()
     {
-        for (int i = 0; i < characters.Length; i++)
+        for (int i = 0; i < character.Length; i++)
         {
-            characters[i].SetState(CharState.Hit);
-            characters[i].Anim.SetTrigger("Hit");
+            character[i].SetState(CharState.Hit);
+            character[i].Anim.SetTrigger("Hit");
         }
     }
 }

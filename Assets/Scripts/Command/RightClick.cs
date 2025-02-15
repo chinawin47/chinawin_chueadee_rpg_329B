@@ -29,7 +29,7 @@ public class RightClick : MonoBehaviour
         }
     }
 
-    private void CommandToWalk(RaycastHit hit, Characters c)
+    private void CommandToWalk(RaycastHit hit, Character c)
     {
         if (c != null)
             c.WalkToPosition(hit.point);
