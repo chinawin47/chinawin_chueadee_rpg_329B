@@ -113,7 +113,7 @@ public abstract class Character : MonoBehaviour
             SetState(CharState.Idle);
             return;
         }
-
+        navAgent.SetDestination(curCharTarget.transform.position);
         float distance = Vector3.Distance(transform.position,curCharTarget.transform.position);
 
         if (distance <= attackRange)

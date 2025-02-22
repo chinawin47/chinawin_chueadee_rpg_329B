@@ -1,12 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LeftClick : MonoBehaviour
 {
     private Camera cam;
    
-    [SerializeField]
-    private Character curChar;
-    public Character CurChar { get { return curChar; } }
+  
 
     [SerializeField]
     private LayerMask layerMask;
@@ -36,13 +35,12 @@ public class LeftClick : MonoBehaviour
 
     private void SelectCharacter(RaycastHit hit)
     {
-        curChar = hit.collider.GetComponent<Character>();
+        Character hero = hit.collider.GetComponent<Character>();
         Debug.Log("selected Char: " + hit.collider.gameObject);
 
-        if (curChar != null)
-        {
-            curChar.ToggleRingSelection(true);
-        }
+            PartyManager.instance.SelectChars.Add(hero);
+            hero.ToggleRingSelection(true);
+        
     }
 
     private void TrySelect(Vector2 screenPos)
@@ -64,15 +62,14 @@ public class LeftClick : MonoBehaviour
 
     private void ClearRingSelection()
     {
-        if(curChar != null)
-        {
-            curChar.ToggleRingSelection(false);
-        }
+        foreach (Character h in PartyManager.instance.SelectChars)
+            h.ToggleRingSelection(false);
+        
     }
 
     private void ClearEverything()
     {
         ClearRingSelection();
-        curChar = null;
+        PartyManager.instance.SelectChars.Clear();
     }
 }

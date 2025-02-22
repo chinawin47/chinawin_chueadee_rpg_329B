@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 856250280}
   - component: {fileID: 856250279}
   - component: {fileID: 856250282}
+  - component: {fileID: 856250283}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -698,6 +699,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doubleRingMarker: {fileID: 6044037666520248651, guid: b5a51952099695e42a2d4b96df215fb5, type: 3}
+--- !u!114 &856250283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856250278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8661b4217563842a8f21585532e680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectChars: []
 --- !u!1001 &890376332
 PrefabInstance:
   m_ObjectHideFlags: 0
