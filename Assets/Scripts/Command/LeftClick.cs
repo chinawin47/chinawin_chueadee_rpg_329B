@@ -26,6 +26,53 @@ public class LeftClick : MonoBehaviour
     }
 
 
+    private void UpdateSelectionBox(Vector2 mousePos)
+    {
+        //Debug.Log("Mouse Pos - " + mousePos);
+        if (!boxSelection.gameObject.activeInHierarchy)
+            boxSelection.gameObject.SetActive(true);
+
+        float width = mousePos.x - startPos.x;
+        float height = mousePos.y - startPos.y;
+
+        boxSelection.anchoredPosition = startPos + new Vector2(width / 2, height / 2);
+
+        width = Mathf.Abs(width);
+        height = Mathf.Abs(height);
+
+        boxSelection.sizeDelta = new Vector2(width, height);
+
+        //store old position for real unit selection
+        oldAnchoredPos = boxSelection.anchoredPosition;
+
+    }
+
+    private void ReleaseSelectionBox(Vector2 mousePos)
+    {
+        //Debug.Log("Step 2 - " + Release Mouse);
+        Vector2 corner1; //down-left corner
+        Vector2 corner2; //top-right corner
+
+        boxSelection.gameObject.SetActive(false);
+
+        corner1 = oldAnchoredPos - (boxSelection.sizeDelta / 2);
+        corner2 = oldAnchoredPos + (boxSelection.sizeDelta / 2);
+
+        foreach (Character member in PartyManager.instance.Members)
+        {
+            Vector2 unitPos = cam.WorldToScreenPoint(member.transform.position);
+
+            if ((unitPos.x > corner1.x && unitPos.x < corner2.x) && (unitPos.y > corner1.y && unitPos.y < corner2.y))
+            {
+                PartyManager.instance.SelectChars.Add(member);
+                member.ToggleRingSelection(true);
+            }
+        }
+
+        boxSelection.sizeDelta = new Vector2(0, 0); //clear Selection Box's size;
+    }
+
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -90,45 +137,5 @@ public class LeftClick : MonoBehaviour
         ClearRingSelection();
         PartyManager.instance.SelectChars.Clear();
     }
-    private void UpdateSelectionBox(Vector2 mousePos)
-    {
-        //Debug.Log("Mouse Pos - " + mousePos);
-        if(!boxSelection.gameObject.activeInHierarchy)
-            boxSelection.gameObject.SetActive(true);
-
-        float width = mousePos.x - startPos.x;
-        float height = mousePos.y - startPos.y;
-
-        boxSelection.anchoredPosition = startPos + new Vector2(width / 2, height / 2);
-
-        //store old position for real unit selection
-        oldAnchoredPos = boxSelection.anchoredPosition;
-
-    }
-
-    private void ReleaseSelectionBox(Vector2 mousePos)
-    {
-        //Debug.Log("Step 2 - " + Release Mouse);
-        Vector2 corner1; //down-left corner
-        Vector2 corner2; //top-right corner
-
-        boxSelection.gameObject.SetActive(false);
-
-        corner1 = oldAnchoredPos - (boxSelection.sizeDelta / 2);
-        corner2 = oldAnchoredPos + (boxSelection.sizeDelta / 2);
-
-        foreach (Character member in PartyManager.instance.Members)
-        {
-            Vector2 unitPos = cam.WorldToScreenPoint(member.transform.position);
-
-            if ((unitPos.x > corner1.x && unitPos.x < corner2.x) && (unitPos.y > corner1.y && unitPos.y < corner2.y))
-            { 
-               PartyManager.instance.SelectChars.Add(member);
-                member.ToggleRingSelection(true);
-            }
-        }
-
-        boxSelection.sizeDelta = new Vector2(0, 0); //clear Selection Box's size;
-    }
-
+   
 }
