@@ -204,8 +204,6 @@ public abstract class Character : MonoBehaviour
             curHP = 0;
             Die();
         }
-
-        
     }
 
     protected void AttackLogic()

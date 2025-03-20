@@ -24,7 +24,7 @@ public class PartyManager : MonoBehaviour
         foreach (Character c in members) 
         {
           c.charTnit(VFXManager.instance);
-            c.MagicSkills.Add(new Magic(0, "Fireball", 10f, 30, 3f, 1f, 0, 1));
+          c.MagicSkills.Add(new Magic(0, "Fireball", 10f, 30, 3f, 1f, 0, 1));
         }
     }
 
