@@ -24,7 +24,14 @@ public class PartyManager : MonoBehaviour
         foreach (Character c in members) 
         {
           c.charTnit(VFXManager.instance);
-          c.MagicSkills.Add(new Magic(0, "Fireball", 10f, 30, 3f, 1f, 0, 1));
+          c.MagicSkills.Add(new Magic(0, "Fireball", 10f, 30, 3f, 1f, 0, 1)); 
+         
+            c.charTnit(VFXManager.instance);
+          c.MagicSkills.Add(new Magic(0, "RainbowGlow", 10f, 40, 3f, 1f, 0, 1));
+
+            c.charTnit(VFXManager.instance);
+            c.MagicSkills.Add(new Magic(0, "PowerDraw", 10f, 50, 3f, 1f, 0, 1));
+
         }
     }
 
@@ -37,6 +44,24 @@ public class PartyManager : MonoBehaviour
             {
                 selectChars[0].IsMagicMode = true;
                 selectChars[0].CurMagicCast = selectChars[0].MagicSkills[0];
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            if (selectChars.Count > 0)
+            {
+                selectChars[0].IsMagicMode = true;
+                selectChars[0].CurMagicCast = selectChars[0].MagicSkills[1];
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (selectChars.Count > 0)
+            {
+                selectChars[0].IsMagicMode = true;
+                selectChars[0].CurMagicCast = selectChars[0].MagicSkills[2];
             }
         }
     }
