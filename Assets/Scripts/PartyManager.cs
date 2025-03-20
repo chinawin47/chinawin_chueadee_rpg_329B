@@ -23,46 +23,44 @@ public class PartyManager : MonoBehaviour
     {
         foreach (Character c in members) 
         {
-          c.charTnit(VFXManager.instance);
-          c.MagicSkills.Add(new Magic(0, "Fireball", 10f, 30, 3f, 1f, 0, 1)); 
-         
-            c.charTnit(VFXManager.instance);
-          c.MagicSkills.Add(new Magic(0, "RainbowGlow", 10f, 40, 3f, 1f, 0, 1));
-
-            c.charTnit(VFXManager.instance);
-            c.MagicSkills.Add(new Magic(0, "PowerDraw", 10f, 50, 3f, 1f, 0, 1));
-
+            c.charTnit(VFXManager.instance, UIManager.instance);
         }
+
+        SelectSingleHero(0);
+
+        members[0].MagicSkills.Add(new Magic(0, "Fireball", 10f, 30, 3f, 1f, 0, 1));
+        members[0].MagicSkills.Add(new Magic(0, "RainbowGlow", 10f, 40, 3f, 1f, 0, 1));
+        members[0].MagicSkills.Add(new Magic(0, "PowerDraw", 10f, 50, 3f, 1f, 0, 1));
+      
+        members[1].MagicSkills.Add(new Magic(0, "Fireball", 10f, 30, 3f, 1f, 0, 1));
+        members[1].MagicSkills.Add(new Magic(0, "RainbowGlow", 10f, 40, 3f, 1f, 0, 1));
+        members[1].MagicSkills.Add(new Magic(0, "PowerDraw", 10f, 50, 3f, 1f, 0, 1));
+        UIManager.instance.ShowMagicToggles();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.M)) 
-        {
-          if(selectChars.Count > 0)
-            {
-                selectChars[0].IsMagicMode = true;
-                selectChars[0].CurMagicCast = selectChars[0].MagicSkills[0];
-            }
-        }
+       
+    }
 
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            if (selectChars.Count > 0)
-            {
-                selectChars[0].IsMagicMode = true;
-                selectChars[0].CurMagicCast = selectChars[0].MagicSkills[1];
-            }
-        }
+    public void SelectSingleHero(int i)
+    {
+        foreach (Character c in selectChars)
+            c.ToggleRingSelection(false);
 
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            if (selectChars.Count > 0)
-            {
-                selectChars[0].IsMagicMode = true;
-                selectChars[0].CurMagicCast = selectChars[0].MagicSkills[2];
-            }
-        }
+        selectChars.Clear();
+
+        selectChars.Add(members[i]);
+        selectChars[0].ToggleRingSelection(true);
+    }
+
+    public void HeroSelectMagicSkill(int i)
+    {
+        if (selectChars.Count <= 0)
+            return;
+
+        selectChars[0].IsMagicMode = true;
+        selectChars[0].CurMagicCast = selectChars[0].MagicSkills[i];
     }
 }
