@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   magicName: Fireball
+  icon: {fileID: 21300000, guid: c051551349144594aa94b7ea04999972, type: 3}
   range: 10
   power: 30
   loadTime: 3

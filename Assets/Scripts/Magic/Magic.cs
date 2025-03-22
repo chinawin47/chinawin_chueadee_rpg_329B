@@ -42,7 +42,8 @@ public class Magic
     public Magic(MagicData data)
     {
         id = data.id;
-        name = data.name;
+        name = data.magicName;
+        icon = data.icon;
         range = data.range;
         power = data.power;
         loadTime = data.loadTime;
