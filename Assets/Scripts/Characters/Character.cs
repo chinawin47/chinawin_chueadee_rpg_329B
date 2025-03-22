@@ -69,7 +69,7 @@ public abstract class Character : MonoBehaviour
     public bool IsMagicMode
     { get { return isMagicMode; } set { isMagicMode = value; } }
 
-    [Header("Invemtory")]
+    [Header("Inventory")]
 
     [SerializeField]
     protected List<Item> inventoryItems;

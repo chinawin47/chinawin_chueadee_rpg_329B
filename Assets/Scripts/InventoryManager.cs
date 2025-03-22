@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    private const int MAXSLOT = 16;
+
     [SerializeField]
     private GameObject[] itemPrefads;
-    public GameObject[] itemPrefabs
-    {  get { return itemPrefads; } set { itemPrefabs = value; } }
+    public GameObject[] ItemPrefabs
+    {  get { return itemPrefads; } set { itemPrefads = value; } }
 
     [SerializeField]
     private ItemData[] itemData;
@@ -29,5 +31,21 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public bool AddItem(Character character, int id)
+    {
+        Item item = new Item(itemData[id]);
+
+        if (character.InventoryItems.Count < MAXSLOT)
+        {
+            character.InventoryItems.Add(item);
+            return true;
+        }
+        else
+        {
+            Debug.Log("Inventory Full");
+            return false;
+        }
     }
 }
