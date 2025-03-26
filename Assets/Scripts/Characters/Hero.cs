@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class Hero : Character
 {
+    void Start()
+    {
+        inventoryItems = new Item[16];
+    }
+
     void Update()
     {
         switch (state)

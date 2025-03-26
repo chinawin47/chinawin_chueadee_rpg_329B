@@ -12,7 +12,7 @@ public enum ItemType
 }
 
 [System.Serializable]
-public class Item : MonoBehaviour
+public class Item
 {
     [SerializeField]
     private int id;

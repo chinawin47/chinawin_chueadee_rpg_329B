@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    private const int MAXSLOT = 16;
+   public const int MAXSLOT = 16;
 
     [SerializeField]
     private GameObject[] itemPrefads;
@@ -14,11 +14,11 @@ public class InventoryManager : MonoBehaviour
     public ItemData[] ItemData 
     { get {return itemData; } set {itemData = value; } }
 
-    public static InventoryManager Instance;
+    public static InventoryManager instance;
 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,15 +37,15 @@ public class InventoryManager : MonoBehaviour
     {
         Item item = new Item(itemData[id]);
 
-        if (character.InventoryItems.Count < MAXSLOT)
+       for(int i = 0; i < MAXSLOT; i++)
         {
-            character.InventoryItems.Add(item);
-            return true;
+            if (character.InventoryItems[i] == null)
+            {
+                character.InventoryItems[i] = item;
+                return true;
+            }
         }
-        else
-        {
-            Debug.Log("Inventory Full");
-            return false;
-        }
+        Debug.Log("Inventory Full");
+        return false;
     }
 }
