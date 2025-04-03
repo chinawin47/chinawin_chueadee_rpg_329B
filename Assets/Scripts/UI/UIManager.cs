@@ -35,6 +35,10 @@ public class UIManager : MonoBehaviour
         instance = this;
     }
 
+    void Start()
+    {
+        InitSlots();
+    }
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.Space)) 
@@ -140,10 +144,22 @@ public class UIManager : MonoBehaviour
          if (hero.InventoryItems[i] != null)
             {
                 GameObject itemObj = Instantiate(itemUIPrefad, slots[i].transform);
-                itemObj.GetComponent<Image>().sprite = hero.InventoryItems[i].Icon;
+             //   itemObj.GetComponent<Image>().sprite = hero.InventoryItems[i].Icon;
+             ItemDrag itemDrag = itemObj.GetComponent<ItemDrag>();
+
+                itemDrag.Item = hero.InventoryItems[i];
+                itemDrag.IconParent = slots[i].transform;
+                itemDrag.Image.sprite = hero.InventoryItems[i].Icon;
             }
         }
     }
 
+    private void InitSlots()
+    {
+        for (int i = 0;i < InventoryManager.MAXSLOT;i++)
+        {
+            slots[i].GetComponent<InventorySlot>().ID = i;
+        }
+    }
 
 }
