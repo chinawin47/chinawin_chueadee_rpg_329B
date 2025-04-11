@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-   public const int MAXSLOT = 16;
+   public const int MAXSLOT = 17;
 
     [SerializeField]
     private GameObject[] itemPrefads;
@@ -54,6 +54,13 @@ public class InventoryManager : MonoBehaviour
         if (PartyManager.instance.SelectChars.Count == 0)
             return;
         PartyManager.instance.SelectChars[0].InventoryItems[index] = item;
+
+        switch(index)
+        {
+            case 16:
+                PartyManager.instance.SelectChars[0].EquipShield(item);
+                break;
+        }
     }
 
     public void RemoveItemInBag(int index)
@@ -62,6 +69,12 @@ public class InventoryManager : MonoBehaviour
             return;
 
         PartyManager.instance.SelectChars[0].InventoryItems[index] = null;
+        switch(index)
+        {
+            case 16:
+                PartyManager.instance.SelectChars[0].UnEquipShield();
+                break;
+        }
     }
 
     private void SpawnDropItem(Item item, Vector3 pos)
