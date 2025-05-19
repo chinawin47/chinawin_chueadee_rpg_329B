@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections.Generic;
 public class InventoryManager : MonoBehaviour
 {
    public const int MAXSLOT = 17;
@@ -118,4 +118,22 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public bool CheckPartyForItem(int id)
+    {
+        Item item = new Item(itemData[id]);
+        Debug.Log(item.ItemName);
+
+        List<Character> party = PartyManager.instance.Members;
+
+        foreach (Character hero in party)
+        {
+            for (int i = 0; i < hero.InventoryItems.Length; i++)
+            {
+                Debug.Log(hero.InventoryItems[i].ItemName);
+                if (hero.InventoryItems[i].ID == item.ID)
+                    return true;
+            }
+        }
+        return false;
+    }
 }

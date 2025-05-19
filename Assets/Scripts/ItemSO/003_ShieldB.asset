@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980d611cf40999f40bfa0df6d585cb16, type: 3}
-  m_Name: 002_ShieldB
+  m_Name: 003_ShieldB
   m_EditorClassIdentifier: 
   id: 3
   itemName: Shield B

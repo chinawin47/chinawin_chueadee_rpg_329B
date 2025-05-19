@@ -11,7 +11,8 @@ public enum CharState
     WalkToMagicCast,
     MagicCast,
     Hit,
-    Die
+    Die,
+    WalkToNPC
 }
 
 public abstract class Character : MonoBehaviour
@@ -21,6 +22,15 @@ public abstract class Character : MonoBehaviour
 
     protected Animator anim;
     public Animator Anim { get { return anim; } }
+
+    [SerializeField]
+    protected Sprite avatarPic;
+    public Sprite AvatarPic { get { return avatarPic;  } }
+
+    [SerializeField]
+    protected string charName;
+    public string ChjarName { get { return charName; } }   
+
 
     [SerializeField]
     protected CharState state;
@@ -371,4 +381,19 @@ public abstract class Character : MonoBehaviour
         }
     }
 
+    // move to NPC
+    public void ToTalkToNPC(Character npc)
+    {
+        if (curHP <= 0 || state == CharState.Die)
+            return;
+
+        // lock target
+        curCharTarget = npc;
+
+        // start walking to enemy
+        navAgent.SetDestination(npc.transform.position);
+        navAgent.isStopped = false;
+
+        SetState(CharState.WalkToNPC);
+    }
 }
