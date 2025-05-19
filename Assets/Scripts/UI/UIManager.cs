@@ -126,6 +126,51 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject confirmPanel;
 
+    [Header("Shop")]
+
+    [SerializeField]
+    private GameObject shopPanel;
+    public GameObject ShopPanel { get { return shopPanel; } }
+
+    [SerializeField]
+    private TMP_Text npcShopNameText;
+
+    [SerializeField]
+    private Transform shopListParent;
+
+    [SerializeField]
+    private Transform partyListParent;
+
+    [SerializeField]
+    private TMP_Text shopMoneyText;
+
+    [SerializeField]
+    private TMP_Text heroMoneyText;
+
+    [SerializeField]
+    private GameObject itemInShopPrefab;
+
+    [SerializeField]
+    private List<GameObject> shopItemList = new List<GameObject>();
+
+    [SerializeField]
+    private List<GameObject> partyItemList = new List<GameObject>();
+
+    [SerializeField]
+    private int totalCost;
+
+    [SerializeField]
+    private int totalPrice;
+
+    [SerializeField]
+    private Npc curShopNpc = null;
+
+    [SerializeField]
+    private Hero curShopHero = null;
+
+    [SerializeField]
+    private TMP_Text heroNameText;
+
     private void Awake()
     {
         instance = this;
@@ -574,4 +619,71 @@ public class UIManager : MonoBehaviour
         MapToggleAvatar();
         ToggleConfirmPanel(false);
     }
+
+    private void ClearShopPanel()
+    {
+        curShopNpc = null;
+        curShopHero = null;
+
+        npcShopNameText.text = "";
+        shopMoneyText.text = "";
+        heroMoneyText.text = "";
+
+        foreach (GameObject obj in shopItemList)
+            Destroy(obj);
+        shopItemList.Clear();
+
+        foreach (GameObject obj in partyItemList)
+            Destroy(obj);
+        partyItemList.Clear();
+    }
+    private void SetupShopItems(Npc npc)
+    {
+        curShopNpc = npc;
+        npcShopNameText.text = curShopNpc.CharName;
+        shopMoneyText.text = curShopNpc.NpcMoney.ToString();
+
+        for (int i = 0; i < curShopNpc.ShopItems.Count; i++)
+        {
+            GameObject itemObj = Instantiate(itemInShopPrefab, shopListParent);
+            shopItemList.Add(itemObj);
+            ItemInShop itemInShop = itemObj.GetComponent<ItemInShop>();
+
+            itemInShop.ID = i;
+            itemInShop.Item = curShopNpc.ShopItems[i];
+            itemInShop.SetupItemInShop(this, 1f);
+        }
+    }
+    private void SetupPartyItems(Hero hero)
+    {
+        curShopHero = hero;
+        heroNameText.text = hero.CharName;
+        heroMoneyText.text = PartyManager.instance.PartyMoney.ToString();
+
+        for (int i = 0; i < 16; i++)
+        {
+            if (hero.InventoryItems[i] != null)
+            {
+                GameObject itemObj = Instantiate(itemInShopPrefab, partyListParent);
+                partyItemList.Add(itemObj);
+                ItemInShop itemInShop = itemObj.GetComponent<ItemInShop>();
+
+                itemInShop.ID = i;
+                itemInShop.Item = hero.InventoryItems[i];
+                itemInShop.SetupItemInShop(this, 0.8f);
+            }
+        }
+    }
+    public void ToggleShopPanel(bool flag)
+    {
+        shopPanel.SetActive(flag);
+    }
+    public void PrepareShopPanel(Npc npc, Hero hero)
+    {
+        ClearShopPanel();
+        SetupShopItems(npc);
+        SetupPartyItems(hero);
+        ToggleShopPanel(true);
+    }
+    
 }
