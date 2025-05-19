@@ -29,7 +29,7 @@ public abstract class Character : MonoBehaviour
 
     [SerializeField]
     protected string charName;
-    public string ChjarName { get { return charName; } }   
+    public string CharName { get { return charName; } }   
 
 
     [SerializeField]
