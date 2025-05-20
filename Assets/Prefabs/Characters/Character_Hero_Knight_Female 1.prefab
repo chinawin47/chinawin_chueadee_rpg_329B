@@ -1196,7 +1196,7 @@ GameObject:
   - component: {fileID: 4749289591712704114}
   m_Layer: 6
   m_Name: Character_Hero_Knight_Female 1
-  m_TagString: Untagged
+  m_TagString: Hero
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   charName: 
   state: 0
   ringSelection: {fileID: 5668298029287569844}
-  curHP: 10
+  curHP: 100
   maxHP: 100
   curCharTarget: {fileID: 0}
   attackRange: 2

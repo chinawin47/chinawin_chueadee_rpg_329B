@@ -3548,7 +3548,7 @@ GameObject:
   - component: {fileID: 1294082382827788635}
   m_Layer: 6
   m_Name: Character_Goblin_WarChief 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3669,7 +3669,7 @@ MonoBehaviour:
   charName: 
   state: 0
   ringSelection: {fileID: 2021834189298663224}
-  curHP: 10
+  curHP: 100
   maxHP: 100
   curCharTarget: {fileID: 0}
   attackRange: 2

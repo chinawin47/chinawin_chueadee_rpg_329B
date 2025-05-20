@@ -39,7 +39,7 @@ public class PartyManager : MonoBehaviour
 
         SelectSingleHero(0);
 
-        members[0].MagicSkills.Add(new Magic(VFXManager.instance.MagicData[0]));
+        /*members[0].MagicSkills.Add(new Magic(VFXManager.instance.MagicData[0]));
         members[0].MagicSkills.Add(new Magic(VFXManager.instance.MagicData[1]));
         members[0].MagicSkills.Add(new Magic(VFXManager.instance.MagicData[2]));
       
@@ -53,7 +53,7 @@ public class PartyManager : MonoBehaviour
         InventoryManager.instance.AddItem(members[1], 0);
         InventoryManager.instance.AddItem(members[1], 1);
         InventoryManager.instance.AddItem(members[1], 2);  //ShieldA
-        InventoryManager.instance.AddItem(members[1], 3);  //ShieldB
+        InventoryManager.instance.AddItem(members[1], 3);  //ShieldB*/
 
         UIManager.instance.ShowMagicToggles();
     }
