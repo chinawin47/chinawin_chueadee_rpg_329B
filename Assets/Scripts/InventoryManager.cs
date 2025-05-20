@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 public class InventoryManager : MonoBehaviour
 {
-   public const int MAXSLOT = 17;
+   public const int MAXSLOT = 18;
 
     [SerializeField]
     private GameObject[] itemPrefads;
@@ -66,11 +66,16 @@ public class InventoryManager : MonoBehaviour
 
         switch(index)
         {
+            case 15:
+                PartyManager.instance.SelectChars[0].EquipSword(item);
+                break;
             case 16:
                 PartyManager.instance.SelectChars[0].EquipShield(item);
                 break;
+           
         }
     }
+    
 
     public void RemoveItemInBag(int index)
     {
@@ -80,6 +85,9 @@ public class InventoryManager : MonoBehaviour
         PartyManager.instance.SelectChars[0].InventoryItems[index] = null;
         switch(index)
         {
+        case 15:
+            PartyManager.instance.SelectChars[0].UnEquipSword();
+            break;
             case 16:
                 PartyManager.instance.SelectChars[0].UnEquipShield();
                 break;

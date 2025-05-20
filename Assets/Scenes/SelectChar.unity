@@ -2859,12 +2859,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charImage: {fileID: 1537741222}
   charNameText: {fileID: 1849731191}
-  strengthText: {fileID: 1670158172}
-  dexterityText: {fileID: 1136172228}
-  constitutionText: {fileID: 19250120}
-  intelligenceText: {fileID: 2121016127}
-  wisdomText: {fileID: 220560497}
-  charismaText: {fileID: 1957915434}
+  strengthText: {fileID: 773768464}
+  dexterityText: {fileID: 1331422951}
+  constitutionText: {fileID: 1548890551}
+  intelligenceText: {fileID: 658859346}
+  wisdomText: {fileID: 300517496}
+  charismaText: {fileID: 1039962522}
   heroPrefabs:
   - {fileID: 131680, guid: 2358ddab1e9ea1047aea257b4b535ca3, type: 3}
   - {fileID: 162860, guid: f6f67a8000b7f5242b918f24e06b4152, type: 3}

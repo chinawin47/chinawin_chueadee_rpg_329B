@@ -1349,13 +1349,23 @@ MonoBehaviour:
   shield:
     id: 0
     itemName: 
-    type: 0
+    type: 2
     icon: {fileID: 0}
     power: 0
     prefabID: 0
     normalPrice: 0
-  shieldHand: {fileID: 0}
+  weapon:
+    id: 0
+    itemName: 
+    type: 4
+    icon: {fileID: 0}
+    power: 0
+    prefabID: 0
+    normalPrice: 0
+  shieldHand: {fileID: 479758}
   shieldObj: {fileID: 0}
+  swordHand: {fileID: 479758}
+  swordObj: {fileID: 0}
   defensePower: 0
   exp: 0
   level: 1

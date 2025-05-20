@@ -48,6 +48,11 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             if (itemDragA.Item.Type != itemType)
                 return;
         }
+        if(itemType == ItemType.Weapon)
+        {
+            if (itemDragA.Item.Type != itemType)
+                return;
+        }
         
         //Remove Item A from Slot A
         inventoryManager.RemoveItemInBag(slotA.ID);
@@ -59,6 +64,10 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             ItemDrag itemDragB = objB.GetComponent<ItemDrag>();
 
             if (slotA.ItemType == ItemType.Shield)
+            {
+                if(itemDragB.Item.Type != slotA.ItemType)
+                    return;
+            }if (slotA.ItemType == ItemType.Weapon)
             {
                 if(itemDragB.Item.Type != slotA.ItemType)
                     return;

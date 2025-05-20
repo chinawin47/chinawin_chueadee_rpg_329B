@@ -281,7 +281,7 @@ public class UIManager : MonoBehaviour
         Character hero = PartyManager.instance.SelectChars[0];
 
         //Show items
-        for (int i = 0; i < InventoryManager.MAXSLOT; i++) 
+    for (int i = 0; i < InventoryManager.MAXSLOT; i++) 
         {
          if (hero.InventoryItems[i] != null)
             {
@@ -296,6 +296,8 @@ public class UIManager : MonoBehaviour
                 itemDrag.Image.sprite = hero.InventoryItems[i].Icon;
             }
         }
+
+
     }
 
     private void InitSlots()
