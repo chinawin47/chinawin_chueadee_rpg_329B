@@ -39,6 +39,7 @@ public class QuestManager : MonoBehaviour
         }
 
         AddQuestToNPC(npcPerson[0], questData[0]); // Give Golem --> Give Potion Quest
+        AddQuestToNPC(npcPerson[0], questData[1]);
     }
 
     public Quest CheckForQuest(Npc npc, QuestStatus status)

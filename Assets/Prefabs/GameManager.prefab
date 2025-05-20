@@ -165,6 +165,7 @@ MonoBehaviour:
   - {fileID: 0}
   questData:
   - {fileID: 11400000, guid: 69d74236435fbab4bb9e5b01883132df, type: 2}
+  - {fileID: 11400000, guid: 10a0e21225bc61c4787e06de364f4af0, type: 2}
   curNpc: {fileID: 0}
   curQuest:
     questId: 0
