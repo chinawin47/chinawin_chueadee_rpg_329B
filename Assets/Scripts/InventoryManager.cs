@@ -29,7 +29,7 @@ public class InventoryManager : MonoBehaviour
         AddItemShopToNPC(1, 4); // magic potion
         AddItemShopToNPC(1, 1);
         AddItemShopToNPC(1, 2);
-        AddItemShopToNPC(1, 4);
+        AddItemShopToNPC(1, 5);
         AddItemShopToNPC(1, 0);
         AddItemShopToNPC(1, 2);
         AddItemShopToNPC(1, 3);

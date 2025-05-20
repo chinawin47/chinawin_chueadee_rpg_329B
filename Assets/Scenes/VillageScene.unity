@@ -530,6 +530,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (5)
@@ -3514,6 +3522,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (14)
@@ -4511,6 +4527,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (6)
@@ -5263,6 +5287,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (2)
@@ -9342,6 +9374,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (13)
@@ -15614,6 +15654,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: SlotShield
@@ -17688,6 +17736,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (7)
@@ -17790,6 +17846,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (9)
@@ -18134,6 +18198,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (3)
@@ -18968,6 +19040,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (8)
@@ -22376,6 +22456,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (11)
@@ -22891,6 +22979,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (10)
@@ -22998,6 +23094,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (15)
@@ -23100,6 +23204,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (1)
@@ -23335,6 +23447,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (12)
@@ -24599,6 +24719,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
       value: Slot (4)
@@ -24878,6 +25006,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6961387228770673782, guid: 4c31644aa9432c545b39109d65456252, type: 3}
+      propertyPath: itemData.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6961387228770673782, guid: 4c31644aa9432c545b39109d65456252, type: 3}
+      propertyPath: 'itemData.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 9988c6a59f89bd6419b4a0adf14dfa5f, type: 2}
     - target: {fileID: 8345084184896832186, guid: 4c31644aa9432c545b39109d65456252, type: 3}
       propertyPath: 'monsters.Array.data[0]'
       value: 
@@ -24982,6 +25118,18 @@ PrefabInstance:
     - target: {fileID: 1318069270952148126, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59e654a919245334881a18dcbffe7752, type: 3}
+    - target: {fileID: 2912879147224017081, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7682945614168475980, guid: 0715d19c0f31782428a61abfcb90c09f, type: 3}
       propertyPath: m_Name
