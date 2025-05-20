@@ -33,6 +33,11 @@ public class QuestManager : MonoBehaviour
 
     void Start()
     {
+        foreach (Character npc in npcPerson)
+        {
+            npc.CharInit(VFXManager.instance, UIManager.instance, InventoryManager.instance, PartyManager.instance);
+        }
+
         AddQuestToNPC(npcPerson[0], questData[0]); // Give Golem --> Give Potion Quest
     }
 

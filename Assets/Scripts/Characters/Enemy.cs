@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+    [SerializeField]
+    private int expDrop;
+    public int ExpDrop { get { return expDrop;} }
+
  void Update()
     {
         switch(state)
@@ -17,4 +21,11 @@ public class Enemy : Character
                 break;
         }
     }
+
+    protected override void Die()
+    {
+        base.Die();
+        partManager.DIstributeTotalExp(expDrop);
+    }
+
 }
