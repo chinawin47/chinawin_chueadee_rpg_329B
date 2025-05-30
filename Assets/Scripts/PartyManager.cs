@@ -145,4 +145,15 @@ public void DIstributeTotalExp(int n)
             hero.ReceiveExp(eachHeroExp);
     }
 
+    public bool HeroJoinParty(Character hero)
+    {
+        if (members.Count >= 6)
+            return false;
+
+        hero.CharInit(VFXManager.instance, UIManager.instance, InventoryManager.instance, this);
+
+        members.Add(hero);
+        return true;
+
+    }
 }
